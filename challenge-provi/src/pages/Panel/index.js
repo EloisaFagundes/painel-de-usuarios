@@ -1,5 +1,6 @@
 import React from "react";
 import Appbar from "../../components/Appbar";
+import { Link } from "react-router-dom"
 
 import styled from "styled-components";
 import { Button, Typography } from "@material-ui/core";
@@ -53,7 +54,10 @@ function Panel() {
           <Circle />
         </ImageCircle>
         <Typography variant="h3">Olá, fulano!</Typography>
-        <Button variant="contained" color="primary" margin="20px" className={classes.margin}>
+        <Button as={Link} to="/painel-detalhe" 
+        className={classes.margin}
+        variant="contained"
+        color="primary">
           Detalhes do meu financiamento
         </Button>
       </ContentWrapper>
