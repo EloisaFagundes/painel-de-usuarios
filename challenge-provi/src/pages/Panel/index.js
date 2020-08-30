@@ -1,10 +1,12 @@
 import React from "react";
 import Appbar from "../../components/Appbar";
-import { Link } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 import styled from "styled-components";
 import { Button, Typography } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
+
+
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -13,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ContentWrapper = styled.div`
+  background-color: #01163e;
   /* background-color: purple; */
   padding: 0.5rem;
   display: flex;
@@ -46,6 +49,10 @@ const Circle = styled.img`
 
 function Panel() {
   const classes = useStyles();
+
+
+
+  const history = useHistory()
   return (
     <>
       <Appbar />
@@ -53,12 +60,13 @@ function Panel() {
         <ImageCircle>
           <Circle />
         </ImageCircle>
-        <Typography variant="h3">Olá, fulano!</Typography>
-        <Button as={Link} to="/painel-detalhe" 
+        <Typography variant="h3" color='secondary'>Bem-vindo(a) à Provi.</Typography>
+        <Button 
         className={classes.margin}
         variant="contained"
-        color="primary">
-          Detalhes do meu financiamento
+        color="primary.light"
+        onClick={() => history.push("/painel-detalhe")}>
+          Detalhes do financiamento
         </Button>
       </ContentWrapper>
     </>

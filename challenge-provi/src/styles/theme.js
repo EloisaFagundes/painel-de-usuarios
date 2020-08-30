@@ -28,5 +28,11 @@ export default createMuiTheme({
       disabled: "rgba(0, 0, 0, 0.38)",
       hint: "rgba(0, 0, 0, 0.38)",
     },
+    button: {
+      light: "#323B69",
+      main: "#323B69",
+      dark: "#323B69",
+      contrastText: "#fff",
+    }
   },
 });
