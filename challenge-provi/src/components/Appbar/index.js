@@ -6,7 +6,7 @@ import { AppBar } from "@material-ui/core";
 function Appbar() {
 
   return (
-    <AppBar position="static" color="primary">
+    <AppBar position="static" color="inherit">
       <Toolbar>
 
       </Toolbar>
