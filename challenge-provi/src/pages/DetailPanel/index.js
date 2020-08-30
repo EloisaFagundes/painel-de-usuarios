@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Appbar from "../../components/Appbar";
 import Installments from "../../components/Graphics/Installments";
 import TotalPaid from "../../components/Graphics/TotalPaid";
