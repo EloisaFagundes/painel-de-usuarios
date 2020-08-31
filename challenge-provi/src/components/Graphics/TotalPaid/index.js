@@ -1,15 +1,5 @@
 import React from "react";
-import { Chart } from "react-google-charts";
-import styled from "styled-components";
-
-export const ChartStyled = styled(Chart)`
-  width: 25vw;
-  height: 60vh;
-
-  @media (max-width: 1200px) {
-    width: 100vw;
-  }
-`;
+import { ChartStyled } from "./styles";
 
 function TotalPaid({ data }) {
   const nonPayd = data.amountTaken + data.totalAmountInTaxes - data.amountPayd;
@@ -17,8 +7,6 @@ function TotalPaid({ data }) {
   return (
     <div>
       <ChartStyled
-        // width={"30vw"}
-        // height={"44vh"}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[
@@ -31,8 +19,7 @@ function TotalPaid({ data }) {
           title: "Evolução dos Pagamentos",
           pieStartAngle: 100,
           colors: ["#01163e", "#C10040"],
-
-          chartArea: { width: "70%", height: "70%" },
+          chartArea: { width: "80%", height: "70%" },
           legend: { position: "right" },
           titlePosition: "top",
           axisTitlesPosition: "in",
