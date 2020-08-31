@@ -20,11 +20,15 @@ MINHA APLICAÇÃO: http://painel-provi-emprestimos.surge.sh/
 <br>
 
 **TELAS**
+
+### painel do Usuário
 <p align="center">
-  ### painel do Usuário
   <img  height='400' src='https://user-images.githubusercontent.com/59846340/91674664-012dbc00-eb10-11ea-9677-125f8272f206.png'>
+  </p>
   <br>
+  
    ### Tela de Bem-Vindo
+   <p align="center">
   <img  height='400' src='https://user-images.githubusercontent.com/59846340/91674626-d7749500-eb0f-11ea-8bf2-9a530a297a7a.png'>
 </p>
 <br>
