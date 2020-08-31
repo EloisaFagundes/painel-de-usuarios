@@ -6,11 +6,27 @@ Essa aplicação é um SPA que consome dados de uma API fornecida em um processo
 
 MINHA APLICAÇÃO: http://painel-provi-emprestimos.surge.sh/
 
-**Versão mobile**
-<p align="center">
-  <img  height='400' src=''>
-</p>
 
+**Gráfico de datas de pagamento + valor da parcela**
+<p align="center">
+  <img  height='400' src='https://user-images.githubusercontent.com/59846340/91674589-b57b1280-eb0f-11ea-9ad2-421563fa546e.png'>
+</p>
+<br>
+
+**Gráfico evolução dos pagamentos**
+<p align="center">
+  <img  height='400' src='https://user-images.githubusercontent.com/59846340/91674626-d7749500-eb0f-11ea-8bf2-9a530a297a7a.png'>
+</p>
+<br>
+
+**TELAS**
+<p align="center">
+  ### painel do Usuário
+  <img  height='400' src='https://user-images.githubusercontent.com/59846340/91674664-012dbc00-eb10-11ea-9677-125f8272f206.png'>
+  <br>
+   ### Tela de Bem-Vindo
+  <img  height='400' src='https://user-images.githubusercontent.com/59846340/91674626-d7749500-eb0f-11ea-8bf2-9a530a297a7a.png'>
+</p>
 <br>
 
 
