@@ -2,10 +2,9 @@
 
 Essa aplicação é um SPA que consome dados de uma API fornecida em um processo seletivo.
 
-
-
 MINHA APLICAÇÃO: http://painel-provi-emprestimos.surge.sh/
 
+# ATENÇÃO! Essa não é uma aplicação desenvolvida como parte da empresa Provi. Ela tem o *intuito único e exclusivo* de apresentar a solução para um desafio de um processo seletivo.
 
 **Gráfico de datas de pagamento + valor da parcela**
 <p align="center">
@@ -29,7 +28,7 @@ MINHA APLICAÇÃO: http://painel-provi-emprestimos.surge.sh/
   
    ### Tela de Bem-Vindo
    <p align="center">
-  <img  height='400' src='https://user-images.githubusercontent.com/59846340/91674626-d7749500-eb0f-11ea-8bf2-9a530a297a7a.png'>
+  <img  height='400' src='https://user-images.githubusercontent.com/59846340/91675363-6f737e00-eb12-11ea-93ca-398d29beb013.png'>
 </p>
 <br>
 
