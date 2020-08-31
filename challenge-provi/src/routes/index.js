@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 
-import Panel from "../pages/Panel";
+import Panel from "../pages/Home";
 import DetailPanel from "../pages/DetailPanel";
 
 export const routes = {

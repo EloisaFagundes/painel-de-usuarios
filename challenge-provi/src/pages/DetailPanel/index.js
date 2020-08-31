@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Appbar from "../../components/Appbar";
 import Installments from "../../components/Graphics/Installments";
 import TotalPaid from "../../components/Graphics/TotalPaid";
@@ -6,14 +6,22 @@ import TotalPaid from "../../components/Graphics/TotalPaid";
 import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 
+const BackgroundStyle = styled.body`
+  background-color: #01163e;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  @media(max-width: 1200 px){
+    height: 100vh;
+  }
+`;
+
 const ContentWrapper = styled.div`
-  /* background-color: purple; */
   display: flex;
   flex-direction: row;
-  /* max-width: 1080px; */
   align-items: center;
   align-self: center;
-
   @media (max-width: 1200px) {
     width: 90%;
     flex-direction: column;
@@ -21,15 +29,17 @@ const ContentWrapper = styled.div`
 `;
 
 const GraphicWrapper = styled.div`
-  margin: 0;
-  width: 70%;
+  /* background-color: red; */
+  margin: 2vw;
+  width: 65%;
   height: 100%;
   display: flex;
   align-items: center;
   align-self: center;
+  justify-content: center;
 
   @media (max-width: 1200px) {
-    width: 90%;
+    width: 100vw;
   }
 `;
 
@@ -38,14 +48,15 @@ const AsideWrapper = styled.div`
   color: black;
   display: flex;
   flex-direction: column;
-  padding: 12px;
+  padding: 12px ;
   text-decoration: none;
-  width: 25%;
+  width: 600px;
   height: 100vh;
 
   @media (max-width: 1200px) {
-    width: 100%;
-    height: 40vh;
+    width: 100vw;
+    height: 60vh;
+    padding: 30px;
   }
 `;
 
@@ -62,33 +73,44 @@ function DetailPanel() {
 
   return (
     <>
-      <Appbar />
-      <Typography variant="h6" align="left">
-        Painel de empréstimos
-      </Typography>
+      <Appbar page="detail" />
+      <BackgroundStyle>
+        <ContentWrapper>
+          <AsideWrapper>
+            <Typography variant="subtitle1" align="left" color="textSecondary">
+              Painel de empréstimos
+            </Typography>
+            <hr />
+            <hr />
+            <Typography variant="overline">Valor total</Typography>
+            <Typography variant="h5" color="secondary">
+              {total?.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}
+            </Typography>
+            <hr />
+            <Typography variant="overline">Valor Juros Total</Typography>
+            <Typography variant="h6" color="secondary">
+              {data?.totalAmountInTaxes?.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}
+            </Typography>
+            <hr />
+            <Typography variant="overline">Taxa de juros mensal</Typography>
+            <Typography variant="h6" color="secondary">
+              {data?.monthlyInterest}%
+            </Typography>
+            <hr />
+            <Typography variant="overline">Valor total pago</Typography>
+            <Typography variant="h6" color="secondary">
+              {data?.amountPayd?.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}
+            </Typography>
+          </AsideWrapper>
 
-      <ContentWrapper>
-        <AsideWrapper>
-          <p>Valor total do empréstimo</p>
-          <p>R${total}</p>
-          <hr />
-          <p>Juros total</p>
-          <p>R${data.totalAmountInTaxes}</p>
-          <hr />
-          <p>Taxa de juros mensal</p>
-          <p>{data.monthlyInterest}%</p>
-          <hr />
-          <p>Valor total pago</p>
-          <p>R${data.amountPayd}</p>
-        </AsideWrapper>
-
-        <GraphicWrapper>
-          <Installments installments={data.installments} />
-        </GraphicWrapper>
-        <GraphicWrapper>
-          <TotalPaid data={data} />
-        </GraphicWrapper>
-      </ContentWrapper>
+          <GraphicWrapper>
+            <Installments installments={data.installments} />
+          </GraphicWrapper>
+          <GraphicWrapper>
+            <TotalPaid data={data} />
+          </GraphicWrapper>
+        </ContentWrapper>
+      </BackgroundStyle>
     </>
   );
 }
