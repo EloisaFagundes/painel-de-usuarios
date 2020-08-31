@@ -1,15 +1,5 @@
 import React from "react";
-import { Chart } from "react-google-charts";
-
-import styled from "styled-components";
-
-export const ChartStyled = styled(Chart)`
-  width: 50vw;
-  height: 60vh;
-  @media(max-width: 1200px) {
-    width: 100vw;
-  }
-`;
+import { ChartStyled } from "./styles";
 
 function Installments({ installments }) {
   let newArray = [["Meses", "Pago", "Não pago"]];
@@ -39,6 +29,7 @@ function Installments({ installments }) {
           legend: { position: "top" },
           titlePosition: "top",
           axisTitlesPosition: "bottom",
+          chartArea: { width: "70%", height: "70%" },
           titleTextStyle: { fontSize: 20, color: "#01163e", bold: true },
           seriesType: "bars",
           series: { 5: { type: "line" } },
